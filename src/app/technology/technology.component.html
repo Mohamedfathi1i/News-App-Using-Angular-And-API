@@ -1,0 +1,44 @@
+<div class="container">
+
+
+  <form class="form" #articalform='ngForm' (ngSubmit)="displayform(articalform)">
+
+    <div class="my-2">
+      <label for="">article title</label>
+      <div class="input-group my-2">
+        <input type="text" class="form-control" [(ngModel)]='title' name='title'>
+      </div>
+    </div>
+
+    <div class="my-2">
+      <label for="">article description</label>
+      <div class="input-group my-2">
+        <input type="text" class="form-control" [(ngModel)]='description' name='description'>
+      </div>
+    </div>
+
+
+    <div class="my-2">
+      <label for="">article category</label>
+      <div class="input-group my-2">
+        <input type="text" class="form-control" [(ngModel)]='category' name='category'>
+      </div>
+    </div>
+
+    <div class="my-2">
+        <label for="">article image</label>
+        <div class="input-group my-2">
+          <input type="text" class="form-control" [(ngModel)]='image' name='image'>
+        </div>
+      </div>
+
+
+    <button class="btn btn-danger">Add artical</button>
+
+
+
+  </form>
+</div>
+
+
+<h5>{{articalform.value|json}}</h5>
